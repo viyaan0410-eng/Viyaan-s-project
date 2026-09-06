@@ -1,12 +1,6 @@
 # Imports 
 import time
 
-for kk in range (len(player)):
-    print(player[0:kk+1:1]), end = '\n'
-    time.sleep(0.1) 
-
-
-
 # Title 
 
 print ('DDDDD'   ,'IIIII','  A  ','RRRRR','Y   Y',sep='  ')
@@ -24,6 +18,43 @@ intrest = input ('\v What is your intrest: ')
 school = input ('\v What is your schools name: ')
 
 sport = input ('\vWhat is you favorite sport:  ')
+
+# Animation Code
+
+print ('Lets see your name in a fancy way:')
+
+for kk in range (len(player)):
+    print(player[0:kk+1:1], end = '\n')
+    time.sleep(0.1)
+
+print ('\v')
+
+
+print ('Lets see your intrest in a fancy way:')
+
+for kk in range (len(intrest)):
+    print(intrest[0:kk+1:1], end = '\n')
+    time.sleep(0.1)
+
+print ('\v')
+
+
+print ('Lets see your schools name in a fancy way:')
+
+for kk in range (len(school)):
+    print(school[0:kk+1:1], end = '\n')
+    time.sleep(0.1)
+
+print ('\v')
+
+
+print ('Lets see your sport in a fancy way:')
+
+for kk in range (len(sport)):
+    print(sport[0:kk+1:1], end = '\n')
+    time.sleep(0.1)
+
+print ('\v')
 
 # Real Code
 
