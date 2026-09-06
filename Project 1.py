@@ -3,7 +3,7 @@ import time
 
 for kk in range (len(player)):
     print(player[0:kk+1:1]), end = '\n'
-    time.sleep(0.1)
+    time.sleep(0.1) 
 
 
 
