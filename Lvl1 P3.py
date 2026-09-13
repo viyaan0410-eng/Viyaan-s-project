@@ -20,7 +20,7 @@ attempts = 0
 done = False
 
 while not done:
-    guess = int( input 'Guess the number: \n')
+    guess = int( input 'Guess the number: \v')
     attempts = attempts + 1
 
     if guess > n:
@@ -76,3 +76,23 @@ while not done:
 
       type_effect('I took ', attempts, 'attempts to guess it.')
       done = True
+
+
+
+done = False
+low = 0
+high = 100
+guess_step = 0
+attempts = 0
+
+while not done:
+    guess = round((low + high)/2)
+    answer = input('Is it '+ str(guess) + '? (y = Yes, s = smaller than that, l = larger than that) \n')
+    attempts = attempts + 1 
+
+    if answer.lower() == 's':
+        high = guess
+    
+    if answer.lower() == 'l':
+        low = guess
+   
