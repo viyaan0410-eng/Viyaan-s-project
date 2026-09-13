@@ -95,7 +95,7 @@ qn = str(num1) + ' __ ' + str(num2) + ' __ ' + str(num3) + ' = ' + str(rhs) + '\
 answer = input(qn)
 
 
-if answer[0] == op_list[op1] and answer[1] == op_list[op1]:
+if answer[0] == op_list[op1] and answer[1] == op_list[op2]:
   
   type_effect (player + ' Well Done')
 
@@ -118,10 +118,10 @@ op3 = random.randint(0, 1)
 
 
 if op1 == 0:
-  rhs = num1 + num2
+  rhs = num1 * num2
 
 if op1 == 1:
-  rhs = num1 - num2
+  rhs = num1 / num2
 
 if op2 == 0:
   abc = rhs + num3
@@ -130,10 +130,10 @@ if op2 == 1:
   abc = rhs - num3
 
 if op3 == 1:
-  bcd = abc * num4
+  bcd = abc + num4
 
 if op3 == 0:
-  bcd = abc / num4
+  bcd = abc - num4
 
 type_effect('Can you tell me the missing operator\n')
  
@@ -142,7 +142,7 @@ qn = str(num1) + ' __ ' + str(num2) + ' __ ' + str(num3) + ' __ ' + str(num4) + 
 
 answer = input(qn)
 
-if answer[0] == op_list[op1] and answer[1] == op_list[op1]:
+if answer[0] == op_list[op1] and answer[1] == op_list[op2] and answer[2] == op_list[op3]:
 
   type_effect (player + ' You are Goated')
 else: 
