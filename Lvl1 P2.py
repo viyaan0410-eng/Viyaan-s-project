@@ -150,7 +150,7 @@ else:
 
 print ("\v")
 
-type_effect ('Thank you for playing ' + player + ' Hope you have a good day!')
+type_effect ('Thank you for playing ' + player + ' Hope you have a great day!')
 
 print ('EEEEE', 'N   N', 'DDDDD   ', sep = '  | ')
 print ('E    ', 'NN  N', 'D    D  ', sep = '  | ')
