@@ -66,8 +66,6 @@ else:
 
   print ('\v')
 
-type_effect ('The correct answer is: ' + op_list[op])
-type_effect (str(num1) + ' ' + op_list[op] + ' ' + str(num2) + ' = ' + str(rhs) + '\n')
  # 3 Number Code
 
 num3 = random.randint(1, 100)
@@ -107,8 +105,6 @@ else:
 
 print ('\v')
 
-type_effect ('The correct answer is: ' + op_list[op1 + op2])
-type_effect (str(num1) + ' ' + op_list[op1] + ' ' +  str(num2) + ' ' +  op_list[op2] + ' ' + str(num3) + ' = ' + str(rhs) + '\n')
 
 # 4 Number Code
 
@@ -146,7 +142,7 @@ qn = str(num1) + ' __ ' + str(num2) + ' __ ' + str(num3) + ' __ ' + str(num4) + 
 
 answer = input(qn)
 
-if answer[0] == op_list[op1] and answer[1] == op_list[op2]:
+if answer[0] == op_list[op1] and answer[1] == op_list[op1]:
 
   type_effect (player + ' You are Goated')
 else: 
@@ -154,13 +150,7 @@ else:
 
 print ("\v")
 
-type_effect ('The correct answer is: ' + op_list[op1 + op2 + op3])
-type_effect (str(num1) + ' ' + op_list[op1] + ' ' + str(num2) + ' ' + op_list[op2] + ' ' + str(num3) + ' ' + op_list[op3] + ' ' + str(num4) + ' = ' + str(bcd) + '\n')
-
-
-type_effect (player + ' thank you for playing!!! ')
-
-print ("\v")
+type_effect ('Thank you for playing ' + player + ' Hope you have a good day!')
 
 print ('EEEEE', 'N   N', 'DDDDD   ', sep = '  | ')
 print ('E    ', 'NN  N', 'D    D  ', sep = '  | ')
