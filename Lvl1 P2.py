@@ -66,7 +66,7 @@ else:
 
   print ('\v')
 
-type_effect ('The correct answwer is: ', op_list[op])
+type_effect ('The correct answer is: ' + op_list[op])
 type_effect (str(num1) + ' ' + op_list[op] + ' ' + str(num2) + ' = ' + str(rhs) + '\n')
  # 3 Number Code
 
@@ -97,7 +97,7 @@ qn = str(num1) + ' __ ' + str(num2) + ' __ ' + str(num3) + ' = ' + str(rhs) + '\
 answer = input(qn)
 
 
-if answer[0] == op_list[op1] and answer[1] == op_list[op2]:
+if answer[0] == op_list[op1] and answer[1] == op_list[op1]:
   
   type_effect (player + ' Well Done')
 
@@ -106,6 +106,9 @@ else:
  type_effect (player + ' You made a mistake...')
 
 print ('\v')
+
+type_effect ('The correct answer is: ' + op_list[op1 + op2])
+type_effect (str(num1) + ' ' + op_list[op1] + ' ' +  str(num2) + ' ' +  op_list[op2] + ' ' + str(num3) + ' = ' + str(rhs) + '\n')
 
 # 4 Number Code
 
@@ -138,10 +141,10 @@ if op3 == 0:
 
 type_effect('Can you tell me the missing operator\n')
  
+
 qn = str(num1) + ' __ ' + str(num2) + ' __ ' + str(num3) + ' __ ' + str(num4) + ' = ' + str(bcd) + '\n'
 
 answer = input(qn)
-
 
 if answer[0] == op_list[op1] and answer[1] == op_list[op2]:
 
@@ -150,6 +153,10 @@ else:
  type_effect (player + ' You made a mistake...')
 
 print ("\v")
+
+type_effect ('The correct answer is: ' + op_list[op1 + op2 + op3])
+type_effect (str(num1) + ' ' + op_list[op1] + ' ' + str(num2) + ' ' + op_list[op2] + ' ' + str(num3) + ' ' + op_list[op3] + ' ' + str(num4) + ' = ' + str(bcd) + '\n')
+
 
 type_effect (player + ' thank you for playing!!! ')
 
