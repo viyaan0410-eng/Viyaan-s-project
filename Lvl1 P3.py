@@ -22,6 +22,10 @@ print ('GGGGG','UUUUU','EEEEE','SSSSS','SSSSS', sep = ' | ')
 
 print('\v')
 
+type_effect('x----------x----------x----------x----------x----------x----------x')
+
+print('\v')
+
 # User Guess
 
 done = False
@@ -47,6 +51,10 @@ while not done:
 
 
 print ('\v')
+
+type_effect('x----------x----------x----------x----------x----------x----------x')
+
+print('\v')
 
 # Computer
 
@@ -86,10 +94,14 @@ while not done:
 
 print ('\v')
 
+type_effect('x----------x----------x----------x----------x----------x----------x')
+
+print('\v')
+
 
 # Binary 
 
-type_effect ('Lets play Binary version!')
+type_effect ('Lets play a faster version!')
 type_effect ('Click enter when you are ready.')
 
 input ()
@@ -103,7 +115,7 @@ attempts = 0
 
 while not done:
     guess = round((low + high)/2)
-    answer = input('Is it '+ str(guess) + '? (y = Yes, s = smaller than that, l = larger than that) \n')
+    answer = input (type_effect ('Is it '+ str(guess) + '? (y = Yes, s = smaller than that, l = larger than that) \v'))
     attempts = attempts + 1 
 
     if answer.lower() == 's':
@@ -119,12 +131,21 @@ while not done:
     
 print('\v')
 
+type_effect('x----------x----------x----------x----------x----------x----------x')
+
+print('\v')
 
 # HangMan Version
-type_effect('Now lets play hangman version!')
+
+type_effect('Now lets play the hangman version!')
 
 print ('\v')
 
+type_effect('Instruction:''\v'' 1. The word is' len(answer) ' letters long.''\v'' 2. You have 6 chances.)
+
+print ('\v')
+
+type_effect('The word can be a animal, fruit.')
 words = ("apple", "orange", "banana", "coconut", "pineapple",
     "ant", "baboon", "badger", "bat", "bear", "beaver", "camel",
     "cat", "clam", "cobra", "cougar", "coyote", "crow", "deer",
@@ -183,7 +204,6 @@ def main():
         display_hint(hint)
         guess = input("Enter a letter: ").lower()
 
-        # Input Validation
         if len(guess) != 1 or not guess.isalpha():
             type_effect("Invalid input")
             continue
