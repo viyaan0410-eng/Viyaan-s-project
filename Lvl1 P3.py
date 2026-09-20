@@ -141,11 +141,6 @@ type_effect('Now lets play the hangman version!')
 
 print ('\v')
 
-type_effect('Instruction:''\v'' 1. The word is' len(answer) ' letters long.''\v'' 2. You have 6 chances.)
-
-print ('\v')
-
-type_effect('The word can be a animal, fruit.')
 words = ("apple", "orange", "banana", "coconut", "pineapple",
     "ant", "baboon", "badger", "bat", "bear", "beaver", "camel",
     "cat", "clam", "cobra", "cougar", "coyote", "crow", "deer",
@@ -156,6 +151,8 @@ words = ("apple", "orange", "banana", "coconut", "pineapple",
     "raven", "rhino", "salmon", "seal", "shark", "sheep", "skunk",
     "sloth", "snake", "spider", "stork", "swan", "tiger", "toad",
     "trout", "turkey", "turtle", "weasel", "whale", "wolf", "wombat", "zebra")
+
+answer = random.choice(words)
 
 hangman_art = {
     0: ("   ",
@@ -193,7 +190,7 @@ def display_answer(answer):
     type_effect(" ".join(answer))
 
 def main():
-    answer = random.choice(words)
+    
     hint = ["_"] * len(answer)
     wrong_guesses = 0
     guessed_letters = set()
@@ -222,18 +219,24 @@ def main():
         else:
             wrong_guesses += 1
 
-        # Win Condition
+        
         if "_" not in hint:
             display_man(wrong_guesses)
             display_answer(answer)
             type_effect("YOU WIN!")
             is_running = False
-        # Lose Condition
+        
         elif wrong_guesses >= len(hangman_art) - 1:
             display_man(wrong_guesses)
             display_answer(answer)
             type_effect("YOU LOSE!")
             is_running = False
+
+type_effect('Instruction:')
+type_effect(' 1. The word is ' + str(len(answer)) + ' letters long.')
+type_effect(' 2. You have 6 chances.')
+type_effect('The word can be a animal, fruit.')
+print ('\v')
 
 if __name__ == '__main__':
     main()
