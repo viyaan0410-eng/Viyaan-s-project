@@ -1,7 +1,6 @@
 import turtle
 t= turtle.Turtle()
 t.shape('turtle')
-t.speed(0.6)
 def draw_line(x0, y0, x1, y1):
     t.penup()
     t.goto(x0,y0)
@@ -18,7 +17,7 @@ def draw_rectangle(x0,y0, len, htg, clr):
     draw_line(x0, y0+htg, x0 , y0)
     t.end_fill()
 
-ts = turtle.screen()
+ts = turtle.getscreen()
 
 
 
