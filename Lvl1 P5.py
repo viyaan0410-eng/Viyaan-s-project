@@ -16,7 +16,7 @@ t.shape('arrow')
 t.begin_fill()
 t.penup()
 
-t.speed(0)
+t.speed(0.6)
 t.pendown()
 t.fillcolor('Red')
 t.goto(100,0)
