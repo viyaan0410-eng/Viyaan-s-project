@@ -1,6 +1,7 @@
 import turtle
 t= turtle.Turtle()
 t.shape('turtle')
+t.speed('0.6')
 def draw_line(x0, y0, x1, y1):
     t.penup()
     t.goto(x0,y0)
@@ -22,8 +23,8 @@ def draw_rectangle(x0,y0, len, htg, clr):
 
 n_rows = 36
 n_cols = 36 
-x_val  = -325
-y_val  = 180
+x_val = -300
+y_val  = 241
 jj = 36
 
 #ts.tracer(0)
@@ -136,9 +137,9 @@ for kk in range(n_rows):
             x_val = x_val + 15
         elif color_list[jj] == 11:
             draw_rectangle(x_val, y_val, 15, 15, '#03C2DD')
-    x_val = -325
+    x_val = -300
     y_val = y_val - 15
-#ts.update()   
+turtle.mainloop()
 
 
 
