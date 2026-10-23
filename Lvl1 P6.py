@@ -27,7 +27,7 @@ x_val = -300
 y_val  = 241
 jj = 36
 
-ts.tracer(0)
+ts.tracer(10)
 
 for kk in range(n_rows):
     if kk == 0:
