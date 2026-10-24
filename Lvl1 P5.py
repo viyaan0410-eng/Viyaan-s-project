@@ -10,25 +10,49 @@ def type_effect(text, delay=0.05):
     return ''
 
 import turtle
-
+ 
 t = turtle.Turtle()
 t.shape('arrow')
-t.begin_fill()
-t.penup()
-
 t.speed(0.6)
-t.pendown()
-t.fillcolor('Red')
-t.goto(100,0)
 
-t.goto(100,100)
+#ANimation
 
-t.goto(0,100)
+def eruption(offset):
+    # volcano
+    t.penup()
+    t.goto(-200,0)
+    t.pendown()
+    t.fillcolor('#6B4F3A')
+    t.begin_fill()
+    
+    t.goto(200,0)
+    
+    t.goto(60,200)
+    
+    t.goto(-60,200)
+    
+    t.goto(-200,0)
+    
+    t.end_fill()
 
-t.goto(0,0)
 
-t.end_fill()
+    #ground
+    t.penup()
+    t.goto(-200,0)
+    t.pendown()
+    t.fillcolor("#1EFF00")
+    t.begin_fill()
+    
+    t.goto(200,0)
+    
+    t.goto(200,-50)
+    
+    t.goto(-200,-50)
+    
+    t.goto(-200,50)
+    
+    t.end_fill()
 
 
-# Last Statement 
-turtle.mainloop()
+
+    

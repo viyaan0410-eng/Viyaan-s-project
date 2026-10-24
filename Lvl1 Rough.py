@@ -1,67 +1,114 @@
-"""Move the mouse over the canvas to paint animated rainbow pixels.
+import turtle
 
-Install pygame with: python -m pip install pygame
-"""
+t = turtle.Turtle()
+t.shape('turtle')
 
-import colorsys
-import math
-import sys
+t.penup()
+t.hideturtle()
 
-try:
-	import pygame
-except ImportError:
-	print("This animation requires pygame. Install it with: python -m pip install pygame")
-	raise SystemExit(1)
+t.speed(0)
+#Line in the middle
+t.goto(480,0)
+t.pendown()
+t.goto(-480,0)
+t.goto(100,0)
+#Backdrop
+s = turtle.Screen()
+s.setup(width=800, height=600)
+s.colormode(255)
+
+t_sky = turtle.Turtle()
+t_sky.speed(0)
+t_sky.hideturtle()
+t_sky.penup()
+
+color_start = (255, 100, 0)
+color_end = (50, 0, 150)
+num_lines = 300
+
+for i in range(num_lines):
+    ratio = i / (num_lines - 1)
+    new_r = int(color_start[0] * (1 - ratio) + color_end[0] * ratio)
+    new_g = int(color_start[1] * (1 - ratio) + color_end[1] * ratio)
+    new_b = int(color_start[2] * (1 - ratio) + color_end[2] * ratio)
+    
+    t_sky.pencolor(new_r, new_g, new_b)
+    t_sky.goto(-400, i)
+    t_sky.pendown()
+    t_sky.forward(800)
+    t_sky.penup()
+
+t_sun = turtle.Turtle()
+t_sun.speed(0)
+t_sun.hideturtle()
+t_sun.penup()
+#sun
+t_sun.goto(0, 0)
+t_sun.fillcolor("yellow")
+t_sun.pencolor("yellow")
+t_sun.begin_fill()
+t_sun.setheading(90)
+t_sun.circle(150, 180)
+t_sun.left(90)
+t_sun.forward(300)
+t_sun.end_fill()
+#sea
+t.pencolor('Blue1')
+t.pendown
+t.fillcolor('Blue1')
+t.begin_fill()
+t.goto(480,0)
+t.goto(480,-180)
+t.goto(-480,-180)
+t.goto(-480,0)
+t.goto(480,0)
+t.end_fill()
+
+t.pencolor('dark blue')
+t.pendown
+t.fillcolor('dark blue')
+t.begin_fill()
+t.goto(480,-180)
+t.goto(480,-360)
+t.goto(-480,-360)
+t.goto(-480,-180)
+t.goto(480,-180)
+t.end_fill()
+#Sun eyes
+t.penup()
+t.hideturtle()
+t.goto(0,0)
+t.left(180)
+t.setheading(90)
+t.goto(-180,75)
+t.pencolor('black')
+t.pendown()
+t.circle(25)
+t.goto(-190,75)
+t.dot(20)
+
+t.penup()
+t.hideturtle()
+t.goto(0,0)
+t.left(160)
+t.setheading(90)
+t.goto(-160,75)
+t.pencolor('black')
+t.pendown()
+t.circle(-25)
+t.goto(-150,75)
+t.dot(20)
+#smile
+t.penup()
+t.goto(0,0)
+t.goto(-125,40)
+t.pencolor('red')
+t.pensize(8)
+t.pendown()
+t.setheading(-90)
+t.circle(-35, 180)
+
+t.hideturtle()
 
 
-pygame.init()
-WIDTH, HEIGHT = 800, 600
-PIXEL_SIZE = 12
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Rainbow Pixel Art — move your cursor")
-clock = pygame.time.Clock()
-font = pygame.font.Font(None, 24)
-
-# Grid cells contain a base hue that shifts over time.
-painted = {}
-elapsed = 0.0
-
-
-def paint(position):
-	column, row = position[0] // PIXEL_SIZE, position[1] // PIXEL_SIZE
-	for dy in range(-1, 2):
-		for dx in range(-1, 2):
-			x, y = column + dx, row + dy
-			if 0 <= x < WIDTH // PIXEL_SIZE and 0 <= y < HEIGHT // PIXEL_SIZE:
-				painted[(x, y)] = (elapsed * 0.12 + math.hypot(dx, dy) * 0.08) % 1.0
-
-
-running = True
-while running:
-	elapsed += clock.get_time() / 1000
-	for event in pygame.event.get():
-		if event.type == pygame.QUIT:
-			running = False
-		elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-			running = False
-		elif event.type == pygame.MOUSEMOTION:
-			paint(event.pos)
-		elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-			paint(event.pos)
-
-	screen.fill((17, 18, 30))
-	for (x, y), base_hue in painted.items():
-		hue = (base_hue + elapsed * 0.16) % 1.0
-		color = tuple(round(channel * 255) for channel in colorsys.hsv_to_rgb(hue, 0.9, 1.0))
-		pygame.draw.rect(
-			screen,
-			color,
-			(x * PIXEL_SIZE + 1, y * PIXEL_SIZE + 1, PIXEL_SIZE - 2, PIXEL_SIZE - 2),
-		)
-
-	hint = font.render("Move cursor to paint  |  Esc to quit", True, (220, 220, 235))
-	screen.blit(hint, (14, 12))
-	pygame.display.flip()
-	clock.tick(60)
-
-pygame.quit()
+turtle.mainloop()
