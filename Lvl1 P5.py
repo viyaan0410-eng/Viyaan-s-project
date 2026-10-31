@@ -38,18 +38,18 @@ def eruption(offset):
 
     #ground
     t.penup()
-    t.goto(-200,0)
+    t.goto(-250,0)
     t.pendown()
     t.fillcolor("#1EFF00")
     t.begin_fill()
     
-    t.goto(200,0)
+    t.goto(250,0)
     
-    t.goto(200,-50)
+    t.goto(250,-50)
     
-    t.goto(-200,-50)
+    t.goto(-250,-50)
     
-    t.goto(-200,50)
+    t.goto(-250,50)
     
     t.end_fill()
 
