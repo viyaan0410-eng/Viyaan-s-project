@@ -18,8 +18,8 @@ type_effect = (Choice)
 
 for kk in range(len(Choice)):
     print(str(kk+1) + '.' + Choice[kk], sep = '\t')
-input('In which section do you want to buy? \n')
-if input == 1:
+Section = input('In which section do you want to buy? \n')
+if Section == 1:
     menu = ['Pizza', 'Milkshake','Burger', 'Ice-Cream', 'Taco']
     price = ['150', '120','100', '40', '60']
 
@@ -55,24 +55,47 @@ if input == 1:
         type_effect("Sorry that was not a valid input.")
 
 
-print('\n')
-print('Your shopping cart')
+    print('\n')
+    print('Your shopping cart')
 
-grand_tot = 0.0
+    grand_tot = 0.0
 
-print('Item', 'Quant', 'Unit Price', 'Total', sep = '\t\t\t')
-for kk in range(len(shopping_cart)):
-    idx = menu.index(shopping_cart[kk])
-    unit_price=price[idx]
-    tot_price = round(unit_price*shopping_quant[kk], 2)
-    grand_tot += tot_price
+    print('Item', 'Quant', 'Unit Price', 'Total', sep = '\t\t\t')
+    for kk in range(len(shopping_cart)):
+        idx = menu.index(shopping_cart[kk])
+        unit_price=price[idx]
+        tot_price = round(unit_price*shopping_quant[kk], 2)
+        grand_tot += tot_price
     type_effect(shopping_cart[kk], shopping_quant[kk], unit_price, tot_price, sep='\t\t\t')
 
-type_effect()
-    
+    type_effect()
 
 
-input(type_effect('In which currency do you want your price in? \n'))
-type_effect('Your total order is (INR)', grand_tot)
+    Currency =  (' Dollars($)', 'Yen(¥)', 'Inr(₹)') 
+    type_effect = (Currency)
 
-#elif input == 2:
+   
+
+    for kk in range(len(Currency)):
+        print(str(kk+1) + '.' + Currency[kk], sep = '\t')
+        input('In which currency do you want to buy? \n')
+
+        if input == 1:
+           dollar = grand_tot / 100
+           type_effect('Your total order is ($)', dollar)
+
+        elif input == 2:
+           yen = grand_tot / 10
+           type_effect('Your total order is (¥)', yen)
+
+
+        else:
+           type_effect('Your total order is (INR)', grand_tot)
+
+
+
+        
+
+   
+
+
