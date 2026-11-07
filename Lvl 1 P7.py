@@ -1,6 +1,7 @@
 import sys
 import time
 
+
 def type_effect(text, delay=0.05):
     for char in text:
         sys.stdout.write(char)
@@ -95,15 +96,76 @@ if Section == '1':
     else:
         print("Invalid choice!")
 
+    print('\n')
+
+    d = input('How do you want to pay? (UPI or card) \n sorry cant do Cash because we do not have "cash on delivery."\n')
+    if d == 'card':
+        
+
+        CC = ('Visa', 'Mastercard', 'Amex')
+
+        for kk in range(len(CC)):
+         print(str(kk+1) + '. ' + CC[kk])
+
+        checkout = int(input('Please choose a card to prooceed checkout! '))
+
+        if checkout == 1:
+            type_effect('We have 10% discount in INR(₹) ')
+            if choice == 2:
+                Inr = grand_tot / 10
+                print('Please Pay', Inr )
+                print('Dingg come from the machine')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+            else:
+                type_effect('Cant use this card')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+
+        elif checkout == 2:
+            type_effect('We have 10% discount in Yen(¥) ')
+            if choice == 3:
+                YeN = yen / 10
+                print('Please Pay', YeN )
+                print('Dingg come from the machine')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+            else:
+                type_effect('Cant use this card')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+
+        elif checkout == 3:
+            type_effect('We have 10% discount in Dollar(¥) ')
+            if choice == 1:
+                llar = dollar / 10
+                print('Please Pay', llar )
+                print('Dingg come from the machine')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+            else:
+                type_effect('Cant use this card')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+
+    else:
+        print('Dingg come from the machine')
+        type_effect('Thank you for using Amazon. ')
+        type_effect('I wish seeing you again. ') 
 
 
-    type_effect('Thank you for using Amazon. ')
-    type_effect('I wish seeing you again. ') 
+
+
+
+
+
+
+
+   
 
     print('-------------------------------------------- \n')
 
 elif  Section == '2':
-   if Section == '1':
     menu = ['T-shirt', 'Jeans ','Kurta', 'Track pant', 'Shirt']
     price =['300', '420','301','720','610']
    
@@ -182,12 +244,80 @@ elif  Section == '2':
 
 
 
+    print('\n')
 
-    type_effect('Thank you for using Amazon. ')
-    type_effect('I wish seeing you again. ') 
+    d = input('How do you want to pay? (UPI or card) \n sorry cant do Cash because we do not have "cash on delivery."\n')
+    if d == 'card':
+        
+
+        CC = ('Visa', 'Mastercard', 'Amex')
+
+        for kk in range(len(CC)):
+         print(str(kk+1) + '. ' + CC[kk])
+
+        checkout = int(input('Please choose a card to prooceed checkout! '))
+
+        if checkout == 1:
+            type_effect('We have 10% discount in INR(₹) ')
+            if choice == 2:
+                Inr = grand_tot / 10
+                print('Please Pay', Inr )
+                print('Dingg come from the machine')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+            else:
+                type_effect('Cant use this card')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+
+        elif checkout == 2:
+            type_effect('We have 10% discount in Yen(¥) ')
+            if choice == 3:
+                YeN = yen / 10
+                print('Please Pay', YeN )
+                print('Dingg come from the machine')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+            else:
+                type_effect('Cant use this card')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+
+        elif checkout == 3:
+            type_effect('We have 10% discount in Dollar(¥) ')
+            if choice == 1:
+                llar = dollar / 10
+                print('Please Pay', llar )
+                print('Dingg come from the machine')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+            else:
+                type_effect('Cant use this card')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+
+    else:
+        print('Dingg come from the machine')
+        type_effect('Thank you for using Amazon. ')
+        type_effect('I wish seeing you again. ') 
+
+
+
+
+
+
+
+
+
+   
 
     print('-------------------------------------------- \n')
 
+
+
+
+
+   
 elif Section == '3':
     if Section == '3':
         menu = ['Tv   ', 'Mobile ','Fridge', 'Ps5    ', 'X-box']
@@ -269,7 +399,74 @@ elif Section == '3':
 
 
 
-    type_effect('Thank you for using Amazon. ')
-    type_effect('I wish seeing you again. ') 
+    print('\n')
+
+    d = input('How do you want to pay? (UPI or card) \n sorry cant do Cash because we do not have "cash on delivery."\n')
+    if d == 'card':
+        
+
+        CC = ('Visa', 'Mastercard', 'Amex')
+
+        for kk in range(len(CC)):
+         print(str(kk+1) + '. ' + CC[kk])
+
+        checkout = int(input('Please choose a card to prooceed checkout! '))
+
+        if checkout == 1:
+            type_effect('We have 10% discount in INR(₹) ')
+            if choice == 2:
+                Inr = grand_tot / 10
+                print('Please Pay', Inr )
+                print('Dingg come from the machine')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+            else:
+                type_effect('Cant use this card')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+
+        elif checkout == 2:
+            type_effect('We have 10% discount in Yen(¥) ')
+            if choice == 3:
+                YeN = yen / 10
+                print('Please Pay', YeN )
+                print('Dingg come from the machine')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+            else:
+                type_effect('Cant use this card')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+
+        elif checkout == 3:
+            type_effect('We have 10% discount in Dollar(¥) ')
+            if choice == 1:
+                llar = dollar / 10
+                print('Please Pay', llar )
+                print('Dingg come from the machine')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+            else:
+                type_effect('Cant use this card')
+                type_effect('Thank you for using Amazon. ')
+                type_effect('I wish seeing you again. ') 
+
+    else:
+        print('Dingg come from the machine')
+        type_effect('Thank you for using Amazon. ')
+        type_effect('I wish seeing you again. ') 
+
+
+
+
+
+
+
+
+
+   
 
     print('-------------------------------------------- \n')
+
+  
+ 
